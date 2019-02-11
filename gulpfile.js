@@ -23,8 +23,8 @@ const browserSync = require('browser-sync').create();
 // Check if local config exists.
 var fs = require('fs');
 if (!fs.existsSync('./config-local.json')) {
-  console.log('\x1b[33m', 'You need to rename default.config-local.json to' +
-    ' config-local.json and update its content if necessary.', '\x1b[0m');
+  console.log('\x1b[33m', 'Copy config-local-example.json to config-local.json' +
+    ' and change the browserSync proxy to your local development URL.', '\x1b[0m');
   process.exit();
 }
 //Include local config.
